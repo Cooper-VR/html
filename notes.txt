@@ -1,0 +1,167 @@
+- structured like a model armature
+- can indent to look like it
+
+structure:
+
+<html>
+	<head>
+		<title>
+		other
+	<head>
+
+	<body>
+		<h1>
+		<p>
+		<p>
+	<body>
+>html>
+
+- there can be muliple bodies
+- quotes not required but recommended
+
+in the <html> element you can get the lanuage so:
+	<html lang="en"> or for country: <html lang="en-US">
+
+paragraphs are <p>
+	- paragraphs will always be the same size regarless of heading above
+	- they have a style atribute for color, font, etc
+	- paragraphs done need a heading
+	- have a title atribute, a little bit of extra when the mouse is hovering over it
+
+- there can only be 6 headings (<h1> through <h6>)
+	- they get smaller as the number increases
+	- can change the font size with the style atribute:
+		- style="font-size:60px;"
+
+- link are <a href="link">This is a link</a>
+	- makes the text "this is a link" a hyperlink
+	- the "href" sets the link, like a class atribute
+
+- images are <img src="fileName" alt="link(site, idk)" width="string number" height="string number">
+	- src is an atribute that defines the image
+	- these can be reletive or absolute urls
+	
+	- alt specifies what text will be in place if the image doesnt exist
+	- use float atribute to tell it where to float on text, value can be left or right
+	
+	if image is clickable can define which areas are clickable
+		use the <map> tag
+		ex:
+		<img src="workplace.jpg" alt="Workplace" usemap="#workmap">
+
+		<map name="workmap">
+  			<area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+  			<area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+  			<area shape="circle" coords="337,300,44" alt="Coffee" href="coffee.htm">
+		</map>
+
+- use the <hr> element to add basically a hormzontal line
+- use the <br> to break the link, so: 
+	- <p> this line <br> breaks</p>
+- use the <pre> element to preserve lines and white space
+
+-font changing:
+	use style
+	font-family, font type
+	font-size, size
+	text-align
+
+element formating:
+	<b> - Bold text
+	<strong> - Important text
+	<i> - Italic text
+	<em> - Emphasized text
+	<mark> - Marked text
+	<small> - Smaller text
+	<del> - Deleted text (strick though)
+	<ins> - Inserted text
+	<sub> - Subscript text
+	<sup> - Superscript text
+
+quotes:
+	<blockquote> for large quotes (paragraphs)
+	<q> for short quotes (sentences)
+	<abbr> abriviates text to other text, ex: <p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+	<address> for contact info ono the author, automatically adds line break
+	<cite> does author, then name, ex: <p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p>
+	<bdo> have an atribute for direction called <dir>, defines the direction of the text "rtl" means right to left, opposite of normal ex: <bdo dir="rtl">This text will be written from right to left</bdo>
+
+comment are done with <!-- "comment" -->
+
+intergrating css:
+	Inline - by using the style attribute inside HTML elements
+		what ive already done <h1 style="background-color:black;">heading</h1>
+	Internal - by using a <style> element in the <head> section
+		defines the css style for the whole html page:
+		
+		<style>
+		body {background-color: powderblue;}
+		h1   {color: blue;}
+		p    {color: red;}
+		</style>
+
+	External - by using a <link> element to link to an external CSS file
+	link to another css file to formate the whole page
+	can be written like a json file like:
+
+		body {
+  			background-color: powderblue;
+		}
+		h1 {
+  			color: blue;
+		}
+		p {
+  			color: red;
+		}
+
+	to intergrate it:
+	<head>
+		<link rel="stylesheet" href="styles.css">
+	</head>
+
+css elements:
+	border:
+		makes box around text
+	padding:
+		set how much space there is between border and text
+	margin:
+		set the space from border to text, (moves text right)
+opening links:
+	The target attribute can have one of the following values:
+
+		_self - Default. Opens the document in the same window/tab as it was clicked
+		_blank - Opens the document in a new window or tab
+		_parent - Opens the document in the parent frame
+		_top - Opens the document in the full body of the window
+		ex: <a href="https://www.w3schools.com/" target="_blank">Visit W3Schools!</a>
+
+		to use image as link just put the <img> tag inside the <a> tag
+	link to email:
+		Use mailto: inside the href attribute to create a link that opens the user's email program (to let them send a new email)
+		EX:<a href="cooperjbower@gmail.com">Send email</a>
+
+	use button as link:
+		you have to use java to determin what happens when th button is clicked
+		ex: <button onclick="document.location='default.asp'">HTML Tutorial</button>
+
+	the title atribute is a tooltip that shows when hovering over it
+	can use css to give it color
+
+creaing bookmarks(not the normal browser ones):
+	use the id atribute to create it (creates almost a variable name for the heading, paragraph, etc)
+	then use the href atribute and the name to get to it, ex: <a href="#C4">Jump to Chapter 4</a>, to get to it
+
+using the<script> tag you can use jave to make functions, and call them onClick
+
+can set background images for paragrps or headers with style="background-image:(url "link to image");"
+images will reapeate if to small, use bakground:"no-repeat"
+to cover all of it use, background-size: cover, setting it to 100% 100% will stretch
+also set the background-attachment to fixed
+
+picture element:
+	holds different images
+	can set the different images to show depending other atributes
+
+add icon:
+	add the <link> tag after the <title> tag
+	should be like rel="reletive path" type="image/x-icon" href="path to file" 
