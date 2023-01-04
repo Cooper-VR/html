@@ -165,3 +165,232 @@ picture element:
 add icon:
 	add the <link> tag after the <title> tag
 	should be like rel="reletive path" type="image/x-icon" href="path to file" 
+
+tables:
+	each cell is definined as <td> (stands for table data)
+	each cell can hold all html elements(text, images, list, links, etc.)
+	each row is defined with <tr> (stands for table row)
+
+	example:
+
+<table>
+	<tr>
+		<td>element1</td>
+		<td>element2</td>
+	</tr>
+	<tr>
+		<td>element1</td>
+		<td>element2</td>
+	</tr>
+</table>
+		
+
+	they can also have headers defined with <th>
+	they are similar to the cell just bolded I think
+	you can have them be vertical based on the which table row its in
+	use the css "text-align" atribute to align the text inside
+
+	you can add borders to individual cells using the css atribute "border" (border: 1px solid black;) borders not there by default
+	to NOT have double borders, use the css atribute "border-collapse" and set it to "collapse"
+
+	to set the color is each cell use the css atribute "background-color"
+	use the "border-radius" to make rounded edjes(will only make tag that is used rounded, not whole table)
+
+	border style, use the border-style atribute
+		values:
+			dotted     
+			dashed     
+			solid    
+			double     
+			groove     
+			ridge     
+			inset     
+			outset     
+			none     
+			hidden
+	use the css atreibute "border-color" to change the color
+
+	to change the width of the table use the HTML atribute "style" to set the width using css
+	can use this with individual headers to better customize
+	
+	use the css "height" atribute to change the height like similar to the "width" atribute
+
+	use the <caption> tag to add a title to the center of the table
+	use the css atribute "padding" to add space between edjes
+		can define further for which edje to do it with "padding-left" and others
+	use css atribute"border-spacing" atribute to add space between cell(default is 2px)
+
+	you can make cell go over mulitple rows with the HTML atribute colspan and setting it to an integer(there is also rowspan)
+
+	to add styles to every other row use the HTML method nth-child(odd or even) and define what to do in curly brackets can use this for coloms and rows
+
+	use the HTML atribute "hover" to set the color of the row or column to a different color
+
+	use the colground and rowground, and set it to an integer to make all cell in that row of colume to a color or style
+
+list:
+	the list starts with <ul> (unordered)
+	an ordered list starts with <ol>
+	each element starts with <li>
+
+	add a discription list to a list with <dl> (basically like bullet points)
+	<dt> is the first think of it
+	<dd> is the bullets of the list
+	
+	unordered:
+	can change the way the bullets look with the HTML atribute "style" and setting it to a css atribute "list-style-type"
+		types:
+			disc
+			circle
+			square
+			none
+	
+	lists can be placed inside of other list to make another set of bullets
+
+	ordered:
+	use the HTML atibute "type" to set how the bullets are being made
+		types:
+			type="1"	The list items will be numbered with numbers (default)
+			type="A"	The list items will be numbered with uppercase letters
+			type="a"	The list items will be numbered with lowercase letters
+			type="I"	The list items will be numbered with uppercase roman numbers
+			type="i"	The list items will be numbered with lowercase roman numbers
+	can define where the bullet starts with the HTML atribute "start"
+	
+		
+	
+block levels:
+	block level can define sections to the html
+	
+	the common ones are <p> and <div>
+	<p> defines a paragraph
+	<div> defines a divided or section of the html
+
+	all the blocks:
+		<address>
+		<article>
+		<aside>
+		<blockquote>
+		<canvas>
+		<dd><div>
+		<dl>
+		<dt>
+		<fieldset>
+		<figcaption>
+		<figure>
+		<footer>
+		<form>
+		<h1>-<h6>
+		<header>
+		<hr>
+		<li>
+		<main>
+		<nav>
+		<noscript>
+		<ol>
+		<p>
+		<pre>
+		<section>
+		<table>
+		<tfoot>
+		<ul>
+		<video>
+	
+inline elements:
+	they do not create new lines, they only take up the width nessisary
+	all the in line elements:
+		<a>
+		<abbr>
+		<acronym>
+		<b>
+		<bdo>
+		<big>
+		<br>
+		<button>
+		<cite>
+		<code>
+		<dfn>
+		<em>
+		<i>
+		<img>
+		<input>
+		<kbd>
+		<label>
+		<map>
+		<object>
+		<output>
+		<q>
+		<samp>
+		<script>
+		<select>
+		<small>
+		<span>
+		<strong>
+		<sub>
+		<sup>
+		<textarea>
+		<time>
+		<tt>
+		<var>
+
+classes:
+	classes are used to section off the html code so that css can accese only that part of it or so that javascript can minipulate it only
+	all you do is the block with class=className after it. then use css to get it using .className{atributes}
+	to use javascript with it use you could use the document.getElementByClassName("className") to get all of them.
+	you can make an elemtn have multple classes use do class=name1 name2
+ids:
+	can make tag and elements have an id with id="idName"
+	you call it with css using #idName
+
+iframes:
+	syntax: <iframe src="url" title="description"></iframe>
+	you can use the HTML atributes height and width to specify the size
+	you can get rid of the border using the style atribute and the css border atribute
+	when you use href to put a link it will make the table show the link use src
+
+javascript:
+	use the <script> tag to define what parts are a script
+	you can use it ti change the style like an atribute of a class
+
+	use the <nonscript> tag to display something if the browser doesn support javascript
+
+head:
+	it is for data without data, and is placed between <html> and <body>
+	it also holds stuff that the html needs like the <title> tag
+	the <style> element describes the look of all the html
+	the <link> element is used to link to an external fine 
+	the <meta> element is used ot show the character set, the description, author, and other
+		this is used to make the view look correct even when on a phone, use: <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	the <base> element defines the base url that all the other will go off of.
+
+layout:
+	there are four main way to layout the html using css those being:
+		CSS framework
+			use w3.css or bootstrap
+		CSS float property
+			easy and all you need is the float and clear properties, however elemets are tied to it so it may harm flexability
+		CSS flexbox
+			it is easily predicable where the elemetns will go and it scales to the screen size
+		CSS grid
+			uses grids to formate stuff, more like a table
+
+responive web pages:
+	they scale and change based on the device or screen size
+	you set this in the <meta>, go above to see example
+
+	with images you set the scale in css to 100% to make it scale to the screen size
+	to show different images based on sceens size use the "media="(max-width: 600px)"" to do it and chagen the max to min or the value to change it
+	you can set text size with vw instead of px to make it scale based on screen size
+
+	you can also scale media to so that you can always see the media on the screen(i think ads use this a lot)
+
+comutercode:
+	use <kbd> to get keyboard input
+	the <samp> tag will define output from the program
+	the <code> is where you put small bits of code, this is also showed on the screen to preserve whitespace use the <pre> tag around it
+	to accses the vaiables in the <code> part use the <var> tag followed by the variable name to get it.
+	
+user input:
+	use the <form> tag to get user input
+		this can get different types of information from the user
+	use the <input> to get also get it, this is the most used
