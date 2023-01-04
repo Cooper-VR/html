@@ -393,4 +393,30 @@ comutercode:
 user input:
 	use the <form> tag to get user input
 		this can get different types of information from the user
-	use the <input> to get also get it, this is the most used
+	use the <input> to get also get it, this is the most used, you can define different types for different thinks, like radio, text, button(the radio types is like a mulitple choice
+	checkbox type is like radio but muliple
+	the submit type sents the data input to another file to handle it
+	the <label> tag is always there inside the input and form tag
+		notice the use of the <label> element in the example above.
+		The <label> tag defines a label for many form elements.
+		The <label> element is useful for screen-reader users, because the screen-reader will read out loud the label when the user focus on the input element.
+		The <label> element also help users who have difficulty clicking on very small regions (such as radio buttons or checkboxes) - because when the user clicks the text within the <label> element, it toggles the radio button/checkbox.
+		The for attribute of the <label> tag should be equal to the id attribute of the <input> element to bind them together.
+
+	the action atribute can be added to the form part so that it has a place to submit when sent
+	he target atribute tells where to display like a new window or somewhere else
+	the methed atribute tell how to send it, with get or post, get is which url variables(not for passwords), and post is with post HTTP transactions
+	autocomplte will let the browser automaically put stuff in if they already have
+	the Novalidate atribute is a true or false and tells if input data should be validated or not
+
+form elements:
+	<input> simple text box that is small not means for name or something
+	<label> for muliple choice one answer stuff
+	<select> gives a dropdown menu, define options with option then value=name
+	<option> is like select but with an option already filled in
+	<textarea> for longer texxt boxes like paragraphs
+	<button> a button
+	<fieldset> and <legend> groups together input fields
+	<datalist> like select (cana find much of a difference)
+	<output> a slider to repusent a number value, doesnt work on old MS edje
+	
