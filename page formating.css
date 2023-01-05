@@ -1,0 +1,21 @@
+table, th, td {
+    
+    border-collapse: collapse;
+}
+p{
+    font-family: saoFont;
+}
+h1{
+    font-size: 50px;
+}
+@font-face {
+    font-family: saoFont;
+    src: url(../html/sao-ui/SAOUI-Bold.otf);
+}
+#pageLinks, #pageLinkRows, #pageLinkCol{
+    height: 50px;
+    background-color: green;
+    font-size: 20px;
+    color: white;
+    
+}

@@ -1,18 +1,18 @@
 <!DOCTYPE html>
     <html>
-        <style>
-            table, th, td {
-            border: 1px solid black;
-            border-collapse: collapse;
-          }
-        </style>
-
         <head>
             <title>my HTML</title>
-            <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-            <base href="https://www.coopersSite/" target="_blank">
+            <link rel="icon" type="image/x-icon" href="favicon.ico">
+            <link rel="stylesheet" href="page formating.css">
+            <script src="htmljavaScript.js"></script>
         </head>
         
+        <!--map for image with link-->
+        <map name="workmap">
+            <area shape="circle" coords="960, 560, 560" href="download.png" alt="somthing">
+        </map>
+
+
         <body>
 
             <h1>This is a Heading</h1>
@@ -24,13 +24,21 @@
 
             <h1 style="background-color:black; color:white;">heading</h1>
             <p>This is an image.</p>
-            <img src="https://images.unsplash.com/photo-1481349518771-20055b2a7b24?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cmFuZG9tfGVufDB8fDB8fA%3D%3D&w=1000&q=80" alt="link(site, idk)" width="50" height="50">
+
+            <!-- this a an image with a link-->
+            <img src="18.jpg" alt="link(site, idk)" width="1920" height="560" usemap="#workmap" target="_blank">
             
+            <!-- page break-->
+            <hr>
+
+            <!--tool tip when hovering-->
             <p>This is a paragraph.</p>
             <p title="I'm a tooltip">This is a paragraph.</p>
             <a href="cooperjbower@gmail.com">Send email</a>
-            <img src="18.jpg">
         </body>
+
+        <!-- align text to the right-->
+        <p align="right">test time</p>
 
         <table>
             <tr>
@@ -38,8 +46,8 @@
                 <td>element2</td>
             </tr>
             <tr>
-                <td>element1</td>
-                <td>element2</td>
+                <td>element3</td>
+                <td>element4</td>
             </tr>
         </table>
 
@@ -51,5 +59,19 @@
                 &#128151
             </p>
         </body>
+
+        <!--javascript time-->
+
+        <img src="../html/images/downloadCopy.png">
+        <img src=getRoot>
+
+        <p id="demo">
+            answer
+        </p>
+
+        <a href="../html/subPage1.html">math page</a>
+        
+
+        
 
     </html>
