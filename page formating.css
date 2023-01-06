@@ -52,7 +52,7 @@ input{
     position: fixed;
     top: 0px;
     right: 0px;
-    transition: shadow 0.15s;
+    transition: box-shadow 0.15s;
 }
 .nightMode:hover{
     
