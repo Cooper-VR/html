@@ -8,11 +8,13 @@ p{
 h1{
     font-size: 50px;
     text-align: center;
+    font-family: sao-regular;
 }
 @font-face {
     font-family: saoFont-bold;
     src: url(../html/sao-ui/SAOUI-Bold.otf);
-
+}
+@font-face {
     font-family: sao-regular;
     src:url(../html/sao-ui/SAOUI-Regular.otf)
 }
