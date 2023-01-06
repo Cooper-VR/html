@@ -8,7 +8,19 @@
         </head>
 
         <body>
-            <video src="../html/videos/sword-art-online.mp4" autoplay loop></video>
+
+            <video id="vid" loop="1" autoplay width="1920" height="1080" src="../html/videos/sword-art-online.mp4" type="sample/mp4" controls="false" autoplay="autoplay" loop="false" muted defaultmuted playsinline/>
+            Your browser does not support the video tag.
+            </video>
+
+            <script>
+                const element = document.querySelector('#vid');
+
+                setTimeout(function() {
+                  element.remove();
+                }, 4500);
+            </script>
+
             <h1>Cooper's website</h1>
             <button class="nightMode" onclick="nightMode()">&#x1F319;</button>
         </body>

@@ -4,6 +4,9 @@ table td{
 p{
     font-family: saoFont-regular;
 }
+#vid{
+    align-self: center;
+}
 h1{
     font-size: 50px;
     text-align: center;
