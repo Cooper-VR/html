@@ -11,15 +11,21 @@ function OnClick(number){
     document.getElementById("demo").innerHTML = result;
 }
 
-function checkPassword(){
-    let userName=document.getElementsByClassName("userName").value;
-    let password=document.getElementsByClassName("password").value;
+let number = 0
 
-    if (userName=="CooperVR"){
-        document.getElementsByClassName("result").innerHTML = "true";
+function nightMode(){
+    global 
+
+    if (number % 2 == 0){
+        document.body.style.backgroundColor = "white";
+        document.body.style.color = "black";
+        document.body.style.border = "white";
     }
-    else{
-        document.getElementsByClassName("result").innerHTML = "false";
+    if (number % 2 == 1){
+        ocument.body.style.backgroundColor = "black";
+        document.body.style.color = "white";
+        document.body.style.border = "black";
     }
 
+    number += 1;
 }

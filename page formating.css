@@ -35,3 +35,21 @@ h1{
 input{
     border-radius: 10px;
 }
+.nightMode{
+    align-self:center;
+    font-size: 30px;
+    border-color: white;
+    border-radius: 8px;
+    border-style: solid;
+    background-color: white;
+    cursor: pointer;
+
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    transition: shadow 0.15s;
+}
+.nightMode:hover{
+    
+    box-shadow: 0 0 8px 8px rgba(0, 0, 0, 0.082);
+}
