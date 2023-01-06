@@ -13,18 +13,17 @@ function OnClick(number){
 
 let number = 0
 
-function nightMode(){
-    global 
-
+function nightMode(){ 
     if (number % 2 == 0){
         document.body.style.backgroundColor = "white";
         document.body.style.color = "black";
-        document.body.style.border = "white";
+        document.body.style.borderColor = "white";
+        
     }
     if (number % 2 == 1){
-        ocument.body.style.backgroundColor = "black";
+        document.body.style.backgroundColor = "black";
         document.body.style.color = "white";
-        document.body.style.border = "black";
+        document.body.style.borderColor = "black";
     }
 
     number += 1;
