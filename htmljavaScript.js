@@ -4,23 +4,18 @@ function OnClick(number){
 
     result = num * num
 
-    console.log(result);
-    console.log(number);
-    console.log(num);
-
     document.getElementById("demo").innerHTML = result;
 }
 
 let number = 0
 
 function nightMode(){ 
-    if (number % 2 == 0){
+    if (number % 2 == 1){
         document.body.style.backgroundColor = "white";
         document.body.style.color = "black";
         document.body.style.borderColor = "white";
-        
     }
-    if (number % 2 == 1){
+    if (number % 2 == 0){
         document.body.style.backgroundColor = "black";
         document.body.style.color = "white";
         document.body.style.borderColor = "black";

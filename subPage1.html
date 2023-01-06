@@ -8,15 +8,15 @@
         </head>
         
         <body>
-            
+            <button class="nightMode" onclick="nightMode()">&#x1F319;</button>
         </body>
         
         <table id=pageLinks title="pages">
             <tr id="pageLinkRows">
-                <td id="pageLinkCol"><a href="index.html" link="color:'white;'" >home</a></td>
+                <td id="pageLinkCol"><a style="color: white;" href="index.html" link="color:'white;'" >home</a></td>
             </tr>
             <tr id="pageLinkRows">
-                <td id="pageLinkCol"><a href="subPage1.html">math page</a></td>
+                <td id="pageLinkCol"><a style="color: white;" href="subPage1.html">math page</a></td>
             </tr>
             <tr id="pageLinkRows">
                 <td id="pageLinkCol">3</td>
@@ -28,7 +28,7 @@
 
         <p>input a number to square</p>
         <input type="number" id="inputField">
-        <button onclick="OnClick(document.getElementById('inputField').value)">click to submnit number</button>
+        <button class="mathSubmit" onclick="OnClick(document.getElementById('inputField').value)">click to submnit number</button>
         <p id="demo"></p>
 
     </html>

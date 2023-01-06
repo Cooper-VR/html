@@ -1,6 +1,5 @@
-table, th, td {
-    
-    border-collapse: collapse;
+table td{
+    border: none;
 }
 p{
     font-family: saoFont-regular;
@@ -36,6 +35,7 @@ h1{
 }
 input{
     border-radius: 10px;
+    border-style: solid;
 }
 .nightMode{
     align-self:center;
@@ -54,4 +54,25 @@ input{
 .nightMode:hover{
     
     box-shadow: 0 0 8px 8px rgba(0, 0, 0, 0.082);
+}
+
+.mathSubmit{
+    color:rgb(41, 41, 41);
+    background: linear-gradient(to bottom, rgb(255, 208, 0), rgb(255, 245, 153));
+    border-radius: 0.5px;
+    border-color: rgb(197, 128, 0);
+    border-style: solid;
+    border-width: 1px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    text-align: center;
+
+    transition: box-shadow 0.15s, opacity 0.15s;
+}
+.mathSubmit:hover{
+    box-shadow: 0 0 5px rgb(195, 221, 80);
+    cursor: pointer;
+}
+.mathSubmit:active{
+    opacity: 0.6;
 }
