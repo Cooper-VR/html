@@ -27,6 +27,5 @@ function nightMode(){
         night.style.backgroundColor="black";
         night.style.borderColor = "black";
     }
-
     number += 1;
 }
