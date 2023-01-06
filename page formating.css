@@ -7,15 +7,28 @@ p{
 }
 h1{
     font-size: 50px;
+    text-align: center;
 }
 @font-face {
     font-family: saoFont;
     src: url(../html/sao-ui/SAOUI-Bold.otf);
 }
-#pageLinks, #pageLinkRows, #pageLinkCol{
-    height: 50px;
+#pageLinkCol{
+    font-family: saoFont;
+    text-align: center;
+    border-radius: 12px;
+    border-style: solid;
+    height: 30px;
     background-color: green;
     font-size: 20px;
     color: white;
-    
+    padding:15px;
+
+    transition: opacity 0.15s;
+}
+#pageLinkCol:hover{
+    opacity: 0.7;
+}
+input{
+    border-radius: 10px;
 }

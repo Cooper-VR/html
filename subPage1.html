@@ -13,10 +13,10 @@
         
         <table id=pageLinks title="pages">
             <tr id="pageLinkRows">
-                <td id="pageLinkCol"><a href="index.html" link="color:'white;'" >go back</a></td>
+                <td id="pageLinkCol"><a href="index.html" link="color:'white;'" >home</a></td>
             </tr>
             <tr id="pageLinkRows">
-                <td id="pageLinkCol">2</td>
+                <td id="pageLinkCol"><a href="subPage1.html">math page</a></td>
             </tr>
             <tr id="pageLinkRows">
                 <td id="pageLinkCol">3</td>
@@ -24,8 +24,11 @@
             <tr id="pageLinkRows">
                 <td id="pageLinkCol">4</td>
             </tr>
-            
-            
         </table>
+
+        <p>input a number to square</p>
+        <input type="number" id="inputField">
+        <button onclick="OnClick(document.getElementById('inputField').value)">click to submnit number</button>
+        <p id="demo"></p>
 
     </html>
