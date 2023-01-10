@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>my HTML</title>
+            <link rel="icon" type="image/x-icon" href="favicon.ico">
+            <link rel="stylesheet" href="page formating.css">
+            <script src="htmljavaScript.js"></script>
+        </head>
+        
+        <body>
+            <button class="nightMode" onclick="nightMode()">&#x1F319;</button>
+            <h1 style="display:inline-block; width: 100%;" >Cooper's website</h1>
+
+            <div class="linksTable">
+                <table id=pageLinks title="pages">
+                    <tr id="pageLinkRows">
+                        <td id="pageLinkCol"><a style="color: white;" href="index.html" link="color:'white;'" >home</a></td>
+                    </tr>
+                    <tr id="pageLinkRows">
+                        <td id="pageLinkCol"><a style="color: white;" href="page2.html">math page</a></td>
+                    </tr>
+                    <tr id="pageLinkRows">
+                        <td id="pageLinkCol"><a style="color: white;" href="page3.html">links</a></td>
+                    </tr>
+                    <tr id="pageLinkRows">
+                        <td id="pageLinkCol"><a style="color: white;" href="page4.html">4</a></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="calc">
+                <table>
+                    <tr>
+                        <td>
+                            <button class="number" onclick="addNumber(this)" name="1">1</button>
+                        </td>
+                        <td>
+                            <button class="number" onclick="addNumber(this)" name="2">2</button>
+                        </td>
+                        <td>
+                            <button class="number" onclick="addNumber(this)" name="2">3</button>
+                        </td>
+                        <td>
+                            <button class="operator"  name="+" onclick="addNumber(this)">+</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="number" onclick="addNumber(this)" name="3">4</button>
+                        </td>
+                        <td>
+                            <button class="number" onclick="addNumber(this)" name="4">5</button>
+                        </td>
+                        <td>
+                            <button class="number" onclick="addNumber(this)" name="5">6</button>
+                        </td>
+                        <td>
+                            <button class="operator"  name="-" onclick="addNumber(this)">-</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="number" onclick="addNumber(this)" name="7">7</button>
+                        </td>
+                        <td>
+                            <button class="number" onclick="addNumber(this)" name="8">8</button>
+                        </td>
+                        <td>
+                            <button class="number" onclick="addNumber(this)" name="9">9</button>
+                        </td>
+                        <td>
+                            <button class="operator" name="*" onclick="addNumber(this)">*</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="operator" name="=" onclick="addNumber(this)">=</button>
+                        </td>
+                        <td>
+                            <button class="number" onclick="addNumber(this)" name="0">0</button>
+                        </td>
+                        <td>
+                            <button class="operator" name="del" onclick="addNumber(this)">del</button>
+                        </td>
+                        <td>
+                            <button class="operator" name="/" onclick="addNumber(this)">/</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+                <p class="inputField"></p>
+                <button class="mathSubmit" onclick="OnClick(document.getElementById('inputField').value)">click to preform opperation</button>
+        </body>
+    </html>

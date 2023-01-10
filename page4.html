@@ -5,28 +5,9 @@
             <link rel="icon" type="image/x-icon" href="favicon.ico">
             <link rel="stylesheet" href="page formating.css">
             <script src="htmljavaScript.js"></script>
-            <meta name="author" content="Cooper">
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, inital-scale=1.0">
         </head>
-
+        
         <body>
-            <div>
-                <!--<video id="vid" loop="1" autoplay style=" object-fit: cover; height:100%; width:100%;" src="../html/videos/sword-art-online.mp4" type="sample/mp4" controls="false" autoplay="autoplay" loop="false" muted defaultmuted playsinline/>
-                Your browser does not support the video tag.
-                </video>
-            -->
-            </div>
-
-            <script>
-                const element = document.querySelector('#vid');
-
-                setTimeout(function() {
-                  element.remove();
-                }, 4500);
-            </script>
-
-            <h1 style="display:inline-block; width: 100%;" >Cooper's website</h1>
             <button class="nightMode" onclick="nightMode()">&#x1F319;</button>
 
             <div class="linksTable">
@@ -38,12 +19,18 @@
                         <td id="pageLinkCol"><a style="color: white;" href="page2.html">math page</a></td>
                     </tr>
                     <tr id="pageLinkRows">
-                        <td id="pageLinkCol"><a style="color: white;" href="page3.html">links</a></td>
+                        <td id="pageLinkCol"><a style="color: white;" href="page3.html">3</a></td>
                     </tr>
                     <tr id="pageLinkRows">
                         <td id="pageLinkCol"><a style="color: white;" href="page4.html">4</a></td>
                     </tr>
                 </table>
+            </div>
+            <div>
+                <p>input a number to square</p>
+                <input type="number" id="inputField">
+                <button class="mathSubmit" onclick="OnClick(document.getElementById('inputField').value)">click to submnit number</button>
+                <p id="demo"></p>
             </div>
         </body>
     </html>

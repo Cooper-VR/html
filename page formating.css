@@ -79,3 +79,18 @@ input{
 .mathSubmit:active{
     opacity: 0.6;
 }
+.linksTable{
+    display:inline-block;
+}
+.linkDiv{
+    font-size: 15px;
+    font-family: sao-regular;
+}
+.calc{
+    display: inline-block;
+    position: fixed;
+    right: 50%;
+}
+.number{
+    background-color: white;
+}
