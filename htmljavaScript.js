@@ -31,21 +31,25 @@ function nightMode(){
 }
 
 let expresion = "";
-let paragraph = document.getElementsByClassName("inputField")
+
 function addNumber(AddString){
-    switch(AddString.name){
-        case "=":
-            var result = eval(expresion);
-            console.log(result);
-            paragraph.innerHTML = expresion + result;
-            expresion = "";
-            break;
-        case "del":
-            expresion = "";
-            break;
-        default:
-            expresion += AddString.name;
-            console.log(expresion);
+    let paragraph = document.getElementsByClassName("inputField")[0];
+    paragraph.innerHTML = expresion;
+    
+    if (AddString.name == "="){
+    var result = eval(expresion);
+        console.log(result);
+        paragraph.innerHTML = result;
+        expresion = "";
+        return result;
+    }
+    if (AddString.name == "del"){
+        expresion = "";
+        paragraph.innerHTML = expresion + result;
+    }
+    else{
+        expresion += AddString.name;
+        console.log(expresion);
     }
     paragraph.innerHTML = expresion;
 }
