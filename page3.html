@@ -1,35 +1,56 @@
 <!DOCTYPE html>
-    <html>
-        <head>
-            <title>my HTML</title>
-            <link rel="icon" type="image/x-icon" href="favicon.ico">
-            <link rel="stylesheet" href="page formating.css">
-            <script src="htmljavaScript.js"></script>
-        </head>
-        
-        <body>
-            <button class="nightMode" onclick="nightMode()">&#x1F319;</button>
-            <h1 style="display:inline-block; width: 100%;" >Cooper's website</h1>
+<html>
+    <head>
+        <title>Youtube Clone</title>
+        <link rel="stylesheet" href="page formating2.css"
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    </head>
 
-            <div class="linksTable">
-                <table id=pageLinks title="pages">
-                    <tr id="pageLinkRows">
-                        <td id="pageLinkCol"><a style="color: white;" href="index.html" link="color:'white;'" >home</a></td>
-                    </tr>
-                    <tr id="pageLinkRows">
-                        <td id="pageLinkCol"><a style="color: white;" href="page2.html">math page</a></td>
-                    </tr>
-                    <tr id="pageLinkRows">
-                        <td id="pageLinkCol"><a style="color: white;" href="page3.html">3</a></td>
-                    </tr>
-                    <tr id="pageLinkRows">
-                        <td id="pageLinkCol"><a style="color: white;" href="page4.html">4</a></td>
-                    </tr>
-                </table>
+    <body>
+        <input class="seachBox" type="textbox" placeholder="Search">
+        <div class="video-preview">
+            <div><img class="thumbnail" src="thumbnails/thumbnail-1.webp"></div>
+            <div class="videoInfo">
+                <div class="channelPicture">
+                    <img  class="profilePicture" src="channalPFP/channel-1.jpeg">
+                </div>
+                <div class="channelInfo">
+                    <p class="title">
+                        Talking Tech and AI with Google CEO Sundar Pichai!
+                    </p>
+                        <p class="name">
+                        Marques Brownlee
+                    </p>
+                    <p class="stats">
+                        3.4M views &#183; 6 months ago
+                    </p>
+                </div>
             </div>
-            <div class="linkDiv">
-                <p class="title"></p>
-                <a href="">link to file</a>
+        </div>
+
+        <div class="video-preview">
+            <div>
+                <img class="thumbnail" src="thumbnails/thumbnail-2.webp">
             </div>
-        </body>
-    </html>
+            <div class="videoInfo">
+                <div class="channelPicture">
+                    <img  class="profilePicture" src="channalPFP/channel-2.jpeg">
+                </div>
+                <div class="channelInfo">
+                    <p class="title">
+                        Try Not To Laugh Challenge #9
+                    </p>
+                        <p class="name">
+                            Markiplier
+                    </p>
+                    <p class="stats">
+                        19M views &#183; 4 years ago
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

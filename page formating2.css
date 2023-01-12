@@ -1,0 +1,55 @@
+.video-preview{
+    display: inline-block;
+}
+.thumbnail{
+    width: 300px;
+}
+
+.seachBox{
+    display: block;
+}
+
+.video-preview{
+    vertical-align: top;
+    display: inline-block;
+}
+
+.videoInfo{
+    display: grid;
+    grid-template-columns: 50px 1fr;
+}
+.title{
+    margin: 0px;
+    width: 250px;
+    font-size: 14px;
+    font-family: Roboto, Arial, sans-serif;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+.stats, .name{
+    color:rgb(96, 96, 96);
+    font-size: 12px;
+    font-family: Roboto, Arial, sans-serif;
+    margin-top: 0px;
+}
+.name{
+    margin-bottom: 4px;
+}
+
+.channelPicture{
+    display: inline-block;
+    width: 36px;
+    vertical-align: top;
+}
+.channelInfo{
+    width: 200px;
+    margin-top: 12px;
+    display: inline-block;
+    margin-left: 4px;
+}
+.profilePicture{
+    margin-top: 12px;
+    width: 100%;
+    border-radius: 25px;
+    vertical-align: center;
+}
