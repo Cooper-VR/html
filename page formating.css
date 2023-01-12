@@ -118,7 +118,8 @@ input{
     background-color: white;
 }
 .parent{
-    padding-top: 300px;
+    padding-top: 100px;
+    overflow: hidden;
     height: 200vh;
     display: flex;
     justify-content: center;
@@ -127,4 +128,22 @@ input{
 }
 .positionChange{
     position: fixed;
+}
+.header{
+    vertical-align:top; 
+    background-color: rgb(43, 43, 43); 
+    display:inline-block; 
+    width: 100%; 
+    color: white; 
+    position: sticky;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    top: 0;
+}
+.desciptionHeader{
+    font-family: saoFont-bold;
+    font-size: 35px;
+    color:white;
+    text-align: center;
+    font-weight: bold;
 }
