@@ -29,7 +29,6 @@ function nightMode(){
     }
     number += 1;
 }
-
 let expresion = "";
 
 function addNumber(AddString){
