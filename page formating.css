@@ -25,7 +25,7 @@ h1{
     font-family: sao-regular;
     src:url(../html/sao-ui/SAOUI-Regular.otf)
 }
-.pageLinkCol{
+.pageLinkCol, .pageLinkRows{
     font-family: saoFont-bold;
     text-align: center;
     border-radius: 12px;
