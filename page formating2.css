@@ -91,8 +91,11 @@ body{
     align-items: center;
 }
 .rightSection{
+    display: flex;
     width: 200px;
-    background-color: grey;
+    vertical-align: top;
+    align-items: center;
+    justify-content: end;
 }
 .search{
     height: 38px;
@@ -138,4 +141,21 @@ body{
 .voiceIcon{
     height: 24px;
     margin-top: 4px
+}
+
+.upload{
+    height: 30px;
+    margin-right: 9px;
+}
+.notifications{
+    height: 30px;
+    margin-right: 9px;
+}
+.apps{
+    height: 30px;
+    margin-right: 9px;
+}
+.myChannel{
+    height: 35px;
+    margin-right: 9px;
 }
