@@ -159,3 +159,11 @@ body{
     height: 35px;
     margin-right: 9px;
 }
+.sidebar{
+    width: 280px;
+    background-color: gray;
+}
+.pageRoot{
+    display: flex;
+    column-gap: 7px;
+}
