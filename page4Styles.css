@@ -1,0 +1,30 @@
+@font-face {
+    font-family: saoFont-bold;
+    src: url(../html/sao-ui/SAOUI-Bold.otf);
+}
+@font-face {
+    font-family: sao-regular;
+    src:url(../html/sao-ui/SAOUI-Regular.otf)
+}
+
+.header{
+    display: flex;
+    justify-content: space-around;
+}
+
+.links{
+    color: black;
+    font-family: sao-regular;
+}
+
+.nightMode{
+    position: fixed;
+
+    right: 10px;
+    top: 5px;
+}
+
+.content{
+    display: flex;
+    padding-top: 30px;
+}
