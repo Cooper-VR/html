@@ -1,0 +1,71 @@
+@font-face {
+    font-family: saoFont-bold;
+    src: url(../html/sao-ui/SAOUI-Bold.otf);
+}
+@font-face {
+    font-family: sao-regular;
+    src:url(../html/sao-ui/SAOUI-Regular.otf)
+}
+
+body{
+    height: 200%;
+    width: 100%;
+    margin: 0px;
+}
+
+.head{
+    width: 100%;
+    z-index: 1;
+    position: fixed;
+    top: 0px;
+    background-color: rgb(138, 138, 138);
+    box-shadow: 0 0 5px 0;
+}
+.link{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+}
+
+.head .links{
+    background-color: rgb(138, 138, 138);
+    font-family: sao-regular, arial;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 3px;
+    color: white;
+}
+
+.head .links:hover{
+    color:black;
+    background-color: rgb(226, 226, 226);
+}
+
+.nightMode{
+    position: fixed;
+    top: 3px;
+    left: 3px;
+    z-index: 2;
+
+}
+.nightMode:hover{
+    background-color: rgba(0, 0, 0, 0.329);
+}
+.nightMode:active{
+    margin-left: 5px;
+    margin-top: 5px;
+}
+.nightMode:hover::after{
+    opacity: 1;
+    content: "nightmode toggle";
+    position: fixed;
+    top: 35px;
+    left: 0px;
+    background-color: rgb(155, 155, 155);
+    opacity: 1;
+    padding: 5px;
+    border-radius: 40px;
+}
