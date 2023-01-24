@@ -1,10 +1,8 @@
-table td{
-    border: none;
-}
 body{
     background-image: url(images/HD-wallpaper-dark-vertical-black-thumbnail.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    margin-top: 5%;
 }
 p{
     font-family: saoFont-regular;
@@ -31,27 +29,20 @@ h1{
     border-radius: 12px;
     border-style: solid;
     height: 30px;
-    width: 15%;
     background-color: green;
+    margin-top: 5px;
     font-size: 20px;
     color: white;
     padding:15px;
-    width: 10%;
 
-    display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-
     transition: opacity 0.15s;
 }
 .pageLinkCol:hover{
     opacity: 0.7;
 }
-.link{
-    width: 100%;
-    height: 100%;
-}
+
 input{
     border-radius: 10px;
     border-style: solid;
@@ -74,7 +65,10 @@ input{
     
     box-shadow: 0 0 8px 8px rgba(0, 0, 0, 0.082);
 }
-
+.main{
+    display: flex;
+    
+}
 .mathSubmit{
     color:rgb(41, 41, 41);
     background: linear-gradient(to bottom, rgb(255, 208, 0), rgb(255, 245, 153));
@@ -95,63 +89,96 @@ input{
 .mathSubmit:active{
     opacity: 0.6;
 }
+.linksTable div{
+    width: 10vw;
+    display: flex;
+    flex-direction: column;
+}
 .linksTable{
+    position: fixed;
+    top: 7%;
+}
+.gibberish{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.gibberish p{
+    color: white;
+    font-size: 20px;
+}
+
+.randomParagraph{
+    width: fit-content;
+    margin-left: 15vw;
+}
+tr, td{
+
+    width: 25%;
+    height: 25%;
+    padding:0;
+}
+
+.randomParagraph3{
+    width: 60vw;
+    margin-left: 20vw;
+    display: flex;
+}
+.randomParagraph2{
     width: 15%;
-    display:inline-block;
 }
-.pageLinks{
-    width: 175px;
-    font-size: 15px;
-    font-family: sao-regular;
+.gibberish2{
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
+.gibberish2 p{
+    color: white;
+    font-size: 20px;
+}
+
 .calc{
-    margin-left: auto; 
-    margin-right: auto;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
 }
-.number{
-    width: 50px;
-    height: 50px;
+.number, .operator{
+    width: 100%;
+    padding-top: 15%;
+    padding-bottom: 15%;
+    height: 100%;
     background-color: white;
 }
-.operator{
-    width: 50px;
-    height: 50px;
-    background-color: white;
-}
+
 .equationBox{
     text-align: center;
     border-radius: 3px;
+    color:black;
+    background-color: white;
+    border-radius: 5px;
 }
 .content{
-    display: block;
-    align-items: center;
     background-color: white;
-    width: 70%;
+    display: inline-block;
 }
 .parent{
-    column-gap: 25px;
-    padding-top: 100px;
-    overflow: hidden;
-    height: 200vh;
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    align-items: flex-start;
-
     top: 150px;
 }
 .positionChange{
     position: fixed;
 }
-.header{
-    vertical-align:top; 
-    background-color: rgb(43, 43, 43); 
-    display:inline-block; 
+.header{ 
+    position: fixed;
+    margin: 0px;
+    background-color: rgb(43, 43, 43);  
     width: 100%; 
     color: white; 
-    position: sticky;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    top: 0;
+    position: fixed;
+    top: 0px;
 }
 .desciptionHeader{
     font-family: saoFont-bold;
