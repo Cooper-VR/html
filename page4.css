@@ -73,11 +73,21 @@ body{
 .iframe{
     width: 75%;
 }
+nav{
+    position: fixed;
+    right: 0px;
+    top: 40px;
+    z-index: 4;
+    width: 10%;
+}
 .navigation{
     font-family: saoFont-Bold;
-    background-color: rgb(0, 87, 0);
-    color:white
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(138, 138, 138);
+    box-shadow:0 0 5px 2px rgb(138, 138, 138);
 }
-.naviagtion tr a{
+a{
     color:white;
 }
