@@ -95,6 +95,10 @@ input{
     flex-direction: column;
 }
 .linksTable{
+    margin-bottom: 40px;
+    padding-right: 40px;
+    overflow-y: scroll;
+    height: 100%;
     position: fixed;
     top: 7%;
 }
