@@ -2,7 +2,7 @@
 Cooper Bower P.M.
 */
 
-// JSF1 Assignment String and Template Literals.
+// JSF1 Assignment Operator Precedence
 
 let country = "Japan";
 let continent = "Asia";
@@ -24,9 +24,6 @@ else{
     console.log("population is less than sweeden");
 }
 */
-
-let firstName = "John";
-let lastName = "Doe";
 
 let text = `${country} is in ${continent} and 120 mill people speak ${language}`;
 
