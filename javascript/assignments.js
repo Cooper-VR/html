@@ -77,7 +77,7 @@ console.log(" \t \n" - 2); //   -2 (just -2)
 a = parseInt(prompt("First number?"));
 b = parseInt(prompt("Second number?"));
 let sum = a + b;
-alert(sum); // 12
+alert(sum); // 3
 
 // JSF1 Assignment String and Template Literals
 description = `${country} is in ${continent} and 120 mill people speak ${language}`;
