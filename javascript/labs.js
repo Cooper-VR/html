@@ -87,3 +87,42 @@ else{
     console.log(higher);
 }
 
+// Coding Challenge #3
+
+let dolphinScore;
+let KoalasScore;
+let dolphinAvg = 0;
+let KoalasAvg = 0;
+let dolphineWin = false;
+
+dolphinScore = [96, 108, 89];
+KoalasScore = [88, 91, 110];
+
+for (let i = 0; i < dolphinScore.length; i++){
+    console.log(dolphinScore[i]);
+    dolphinAvg += dolphinScore[i];
+}
+dolphinAvg /= dolphinScore.length
+
+for (let i = 0; i < KoalasScore.length; i++){
+    KoalasAvg += KoalasScore[i];
+}
+KoalasAvg /= KoalasScore.length
+
+console.log(`dolphine average ${dolphinAvg}`);
+console.log(`Koalas average ${KoalasAvg}`);
+
+dolphineWin = dolphinAvg > KoalasAvg;
+
+if (dolphineWin == true && dolphinAvg > 100){
+    console.log("dolphines won");
+}
+else if (dolphineWin == false && KoalasAvg > 100){
+    console.log("Koalas won");
+}
+else if (dolphineWin == true && dolphinAvg <= 100){
+    console.log("dolphines won but didnt score 100");
+}
+else if (dolphineWin == false && KoalasAvg <= 100){
+    console.log("Koalas won but didnt score 100");
+}
