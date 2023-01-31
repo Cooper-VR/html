@@ -130,3 +130,26 @@ if (language == "English" && population < 50 && numNeighbours > 0){
 else{
     console.log(`${country} does not fit the requirements`);
 }
+
+// JSF1 Assignment The Switch Statement
+
+switch(language){
+    case("Chinese" || "Mandarin"):
+        console.log("MOST number of native speakers!");
+        break;
+    case("Spanish"):
+        console.log("2nd place in number of native speakers");
+        break;
+    case("English"):
+        console.log("third place");
+        break;
+    case("Hindi"):
+        console.log("Number 4");
+        break;
+    case("Arabic"):
+        console.log("5th most natively spoken language");
+        break;
+    default:
+        console.log("Great language too :D");
+        break;
+}
