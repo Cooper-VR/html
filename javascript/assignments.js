@@ -6,7 +6,7 @@ Cooper Bower P.M.
 
 let country = "Japan";
 let continent = "Asia";
-let population = 1257000;
+let population = 125;
 let country2 = country;
 
 alert(country2);
@@ -83,3 +83,29 @@ alert(sum); // 3
 description = `${country} is in ${continent} and 120 mill people speak ${language}`;
 
 console.log(description);
+
+// JSF1 Assignment if-else Statements
+let above33;
+
+
+if (population > 33){
+    above33 = `${country}s population is above average`;
+    console.log(above33);
+}
+else{
+    above33 = `${country}s population is below average`;
+    console.log(above33);
+}
+
+// JSF1 Assignment Type Conversion and Coercion
+
+console.log('9' - '5'); //4
+console.log('19' - '13' + '17'); //617
+console.log('19' - '13' + 17); //23
+console.log('123' < 57); //false
+console.log(5 + 6 + '4' + 9 - 4 - 2); //1143
+
+//JSF1 Assignment Truthy Falsey
+//none
+
+//JSF1 Assignment  Equality Operators.

@@ -44,3 +44,46 @@ console.log("Set 2");
 console.log(markBMI);
 console.log(johnBMI);
 console.log("mark highter: " + markHigherBMI);
+
+// Coding Challenge #2
+
+let markMass = 78;
+let markTall = 1.69;
+
+let johnMass = 82;
+let johnTall = 1.95;
+
+let MarkBMI = markMass / (Math.pow(markTall, 2));
+let JohnBMI = johnMass / (Math.pow(johnTall, 2));
+
+let higher;
+console.log("Set 1:")
+if (MarkBMI > JohnBMI){
+    higher = `Mark's BMI (${MarkBMI}) is higher than John's BMI (${JohnBMI})!`;
+    console.log(higher);
+}
+else{
+    higher = `John's BMI (${JohnBMI}) is higher than Mark's BMI (${MarkBMI})!`;
+    console.log(higher);
+}
+
+
+
+markMass = 95;
+markTall = 1.88;
+
+johnMass = 85
+johnTall = 1.76
+
+MarkBMI = markMass / (Math.pow(markTall, 2));
+JohnBMI = johnMass / (Math.pow(johnTall, 2));
+console.log("Set 2");
+if (MarkBMI > JohnBMI){
+    higher = `Mark's BMI (${MarkBMI}) is higher than John's BMI (${JohnBMI})!`;
+    console.log(higher);
+}
+else{
+    higher = `John's BMI (${JohnBMI}) is higher than Mark's BMI (${MarkBMI})!`;
+    console.log(higher);
+}
+
