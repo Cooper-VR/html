@@ -109,3 +109,24 @@ console.log(5 + 6 + '4' + 9 - 4 - 2); //1143
 //none
 
 //JSF1 Assignment  Equality Operators.
+
+let numNeighbours = prompt('How many neighbor countries does your country have?');
+
+if (parseInt(numNeighbours) === 1){ //if using "===" needs to be same data type
+    console.log("only 1 border");
+}
+else if (numNeighbours > 1){
+    console.log("more than one border");
+}
+else{
+    console.log("no borders");
+}
+
+// JSF1 Assignment Logical Operator
+
+if (language == "English" && population < 50 && numNeighbours > 0){
+    console.log(`${country} would fit that`);
+}
+else{
+    console.log(`${country} does not fit the requirements`);
+}
