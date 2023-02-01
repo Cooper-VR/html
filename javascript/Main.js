@@ -1,17 +1,14 @@
 window.onload = function() {
-    let todo1 = "Get groceries";
-    let todo2 = "Wash car";
-    let todo3 = "Make dinner";
-
-    
+    let todoList = ["Get groceries", "Wash car", "Make dinner"];
+    todoList.push("another todo");
 
     function addTodo(todoTitle){
-        let elememt = document.createElement("div");
-        elememt.innerHTML = todoTitle;
-        document.body.appendChild(elememt);
+            let elememt = document.createElement("div");
+            elememt.innerHTML = todoTitle;
+            document.body.appendChild(elememt);
     }
 
-    addTodo(todo1);
-    addTodo(todo2);
-    addTodo(todo3);
+    todoList.forEach(function(parem){
+        addTodo(parem)
+    });
 }

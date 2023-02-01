@@ -5,10 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>JavaScript Test</title>
-    <script src="Main.js"></script>
+    <!--<script src="Main.js"></script>-->
     <!--<link rel="stylesheet" href="styles/style.css"-->
   </head>
   <body>
-    <button>Press me</button>
+    <input id="todoTitle" type="text" />
+    <button onclick="addTodo()">Press me</button>
+    <script>
+      let todoList = ["Get groceries", "Wash car", "Make dinner"];
+
+      todoList.forEach(function(parem){
+        let elememt = document.createElement("div");
+        elememt.innerHTML = parem;
+        document.body.appendChild(elememt);
+      });
+
+      function addTodo(){
+        let textBox = document.getElementById('todoTitle');
+        let title = textBox.value;
+        todoList.push(title);
+      }
+    </script>
   </body>
 </html>
