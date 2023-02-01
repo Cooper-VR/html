@@ -9,21 +9,53 @@
     <!--<link rel="stylesheet" href="styles/style.css"-->
   </head>
   <body>
-    <input id="todoTitle" type="text" />
+    <input id="todoTitle" type="text">
+    <input type="date" id="datePicker">
     <button onclick="addTodo()">Press me</button>
-    <script>
-      let todoList = ["Get groceries", "Wash car", "Make dinner"];
 
-      todoList.forEach(function(parem){
-        let elememt = document.createElement("div");
-        elememt.innerHTML = parem;
-        document.body.appendChild(elememt);
-      });
+    <div id="list"></div>
+
+    <script>
+      let todoList = [
+        {
+          title: "Get groceries",
+          dueDate: "2023-10-04"
+        },
+        {
+          title: "Wash car",
+          dueDate: "2023-50-24"
+        },
+        {
+          title: "Make dinner",
+          dueDate: 2023-4-20
+        }
+      ];
+
+      render();
 
       function addTodo(){
-        let textBox = document.getElementById('todoTitle');
-        let title = textBox.value;
-        todoList.push(title);
+        const todoDate = document.getElementById("datePicker");
+        const textBox = document.getElementById('todoTitle');
+        const dueDate = todoDate.value;
+        const title = textBox.value;
+
+        todoList.push({
+          title: title,
+          dueDate: dueDate
+        });
+
+        render();
+      }
+      function render(){
+        //reset list
+        const list = document.getElementById("list");
+        list.innerHTML = "";
+
+        todoList.forEach(function(toDo){
+          const elememt = document.createElement("div");
+          elememt.innerHTML = toDo.title + " " + toDo.dueDate;
+          list.appendChild(elememt);
+        });
       }
     </script>
   </body>
