@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JavaScript Test</title>
+    <!--<script src="Main.js"></script>-->
+    <!--<link rel="stylesheet" href="styles/style.css"-->
+  </head>
+  <body>
+    <input id="todoTitle" type="text">
+
+    <script>
+      let todoList = [
+        {
+          title: "Get groceries",
+          dueDate: "2023-10-04"
+        },
+        {
+          title: "Wash car",
+          dueDate: "2023-50-24"
+        },
+        {
+          title: "Make dinner",
+          dueDate: 2023-4-20
+        }
+      ];
+
+      render();
+
+      function addTodo(){
+        const todoDate = document.getElementById("datePicker");
+        const textBox = document.getElementById('todoTitle');
+        const dueDate = todoDate.value;
+        const title = textBox.value;
+
+        todoList.push({
+          title: title,
+          dueDate: dueDate
+        });
+
+        render();
+      }
+      function render(){
+        //reset list
+        const list = document.getElementById("list");
+        list.innerHTML = "";
+
+        todoList.forEach(function(toDo){
+          const elememt = document.createElement("div");
+          elememt.innerHTML = toDo.title + " " + toDo.dueDate;
+          list.appendChild(elememt);
+        });
+      }
+    </script>
+  </body>
+</html>

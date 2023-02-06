@@ -1,12 +1,3 @@
-function OnClick(){
-    let num = document.getElementById("inputField").value;
-    let result = 0;
-
-    result = num * num;
-
-    document.getElementById("demo").innerHTML = result;
-}
-
 let number = 0;
 function nightMode(){ 
 
