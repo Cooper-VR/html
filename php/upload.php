@@ -1,34 +1,41 @@
 <?php
-if (isset($_POST['submit'])){
-    $file = $_FILES['file'];
+if (isset($_FILES['file'])) {
+  $file = $_FILES['file'];
+  $fileName = $file['name'];
+  $fileTmpName = $file['tmp_name'];
+  $fileSize = $file['size'];
+  $fileError = $file['error'];
+  $fileType = $file['type'];
 
-    print_r($file);
+  $fileExt = explode('.', $fileName);
+  $fileActualExt = strtolower(end($fileExt));
 
-    $fileName = $_FILES['file']['name'];
-    $fileTmpName = $_FILES['file']['tmp_name'];
-    $fileSize = $_FILES['file']['size'];
-    $fileError = $_FILES['file']['error'];
-    $fileType = $_FILES['file']['type'];
+  $allowed = array('jpg', 'jpeg', 'png', 'pdf');
 
-    $fileExt = explode('.', $fileName);
-    $fileActualExt = strtolower(end($fileExt));
+  if (in_array($fileActualExt, $allowed)) {
+    if ($fileError === 0) {
+      if ($fileSize < 1000000) {
+        $fileNameNew = uniqid('', true) . "." . $fileActualExt;
+        $fileDestination = 'uploads/' . $fileNameNew;
 
-    $allowed = array('jpg', 'jpeg', 'png');
-
-    if (in_array($fileActualExt, $allowed)) {
-        if ($fileError === 0){
-            if ($fileSize < 1000000){
-                $fileNameNew = uniqid('', true).".".$fileActualExt;
-                $fileDestination = 'uploads/' . $fileNameNew;
-                move_uploaded_file($fileTmpName, $fileDestination);
-                echo "done";
-            } else{
-                echo "file to large";
-            }
-        } else{
-            echo "Error";
+        if (!file_exists('uploads')) {
+          mkdir('uploads', 0777, true);
         }
-    } else{
-        echo "you cant upload that file type";
+
+        $fileDestination = realpath('uploads') . '/' . $fileNameNew;
+
+        if (move_uploaded_file($fileTmpName, $fileDestination)) {
+          echo 'File uploaded successfully';
+        } else {
+          echo 'Unable to move the uploaded file to the destination directory';
+        }
+      } else {
+        echo 'File is too large';
+      }
+    } else {
+      echo 'There was an error uploading your file';
     }
+  } else {
+    echo 'Invalid file type';
+  }
 }
