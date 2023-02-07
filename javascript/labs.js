@@ -126,3 +126,47 @@ else if (dolphineWin == true && dolphinAvg <= 100){
 else if (dolphineWin == false && KoalasAvg <= 100){
     console.log("Koalas won but didnt score 100");
 }
+
+// JSF2 Coding Challenge #
+const findAvg = (score) =>{
+    let total = 0;
+    for (var i = 0; i < score.length; i++){
+        total += score[i];
+    }
+    return total / score.length;
+}
+
+const findWinner = (score1, score2) => {
+    let winner = 0;
+    if (score1 > score2){
+        if (score2 * 2 < score1){
+            winner = 1;
+        } else{
+            winner = 3;
+        }
+    } else {
+        if (score1 * 2 < score2){
+            winner = 2;
+        } else{
+            winner = 3;
+        }
+    }
+    return winner;
+}
+
+dolAvg = findAvg(dolphinScore);
+kolAvg = findAvg(KoalasScore);
+
+winner = findWinner(dolAvg, KoalasAvg);
+
+switch(winner){
+    case(1):
+        console.log(`dolphines win ${dolAvg} to ${kolAvg}`);
+        break;
+    case(2):
+        console.log(`Koalas win ${kolAvg} to ${dolAvg}`);
+        break;
+    case(3):
+        console.log(`nobody won`);
+        break;
+}

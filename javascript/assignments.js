@@ -154,4 +154,67 @@ switch(language){
         break;
 }
 
-//
+// JSF2 Assignment Function
+function describeCountry (country, population, capitalCity){
+    const finalString = `${country} has ${population} million people and its capital city is ${capitalCity}`;
+    return finalString;
+}
+
+const description1 = describeCountry(prompt("whats the country"), prompt("what is the population"), prompt("what is the capital"));
+const description2 = describeCountry(prompt("whats the country"), prompt("what is the population"), prompt("what is the capital"));
+const description3 = describeCountry(prompt("whats the country"), prompt("what is the population"), prompt("what is the capital"));
+
+console.log(description1);
+console.log(description2);
+console.log(description3);
+
+// JSF2 Assignment Function Declarations vs. Expressions
+function populationPercent (population){
+    const total = 7900;
+    const percent = (population / total) * 100;
+    return percent;
+}
+
+const pop1 = populationPercent(prompt("whats the popluation"));
+const pop2 = populationPercent(prompt("whats the popluation"));
+const pop3 = populationPercent(prompt("whats the popluation"));
+
+console.log(pop1);
+console.log(pop2);
+console.log(pop3);
+
+// JSF2 Assignment Function Declarations vs. Expressions
+
+const populationPercent2 = (population) => (population / 7900) * 100;
+const population1 = prompt("whats the population");
+const population2 = prompt("whats the population");
+const population3 = prompt("whats the population");
+
+console.log(populationPercent2(population1));
+console.log(populationPercent2(population2));
+console.log(populationPercent2(population3));
+
+const sum2 = (num1, num2) => num1 + num2;
+const stringLength2 = (str) => console.log(`the length of "${str}" is:`, str.length);
+const stringLength3 = (str) => {
+    let length = str.length
+    console.log(`the length of "${str}" is:`, length)
+    return str.length
+};
+const showAlert = (name) => {    
+    alert(alerts[(Math.floor(Math.random()*alerts.length))] + `, ${name}!`)
+};
+
+// JSF2 Assignment Functions Calling Other Functions
+const describePopulation = (country, population) => {
+    const formatedString = `${country} has ${population} million people, which is about ${populationPercent(population)}% of the world.`;
+    return formatedString;
+};
+
+console.log(describePopulation(prompt("another set country") ,prompt("another set for population")));
+console.log(describePopulation(prompt("another set country") ,prompt("another set for population")));
+console.log(describePopulation(prompt("another set country") ,prompt("another set for population")));
+
+// JSF2 Assignment Introduction to Arrays
+
+populations = []
