@@ -1,8 +1,10 @@
+//get and set the canvas
 const canvas = document.getElementById("pongGame");
 const context = canvas.getContext("2d");
 canvas.width = 650;
 canvas.height = 400;
 
+//create score varrables
 let score1 = 0;
 let score2 = 0;
 
@@ -17,7 +19,6 @@ function doKeyDown(e){
         player1.y += player1.gravity * 6;
     }
 }
-
 window.addEventListener("keypress", doKeyDown2, false);
 function doKeyDown2(e){
     let key = e.key;
@@ -29,6 +30,7 @@ function doKeyDown2(e){
     }
 }
 
+//constructor for moving objects
 class Element{
     constructor(options){
         this.x = options.x;
@@ -84,6 +86,7 @@ function diplayScore2(){
     context.fillStyle = "#fff"
     context.fillText(score2, canvas.width/2 + 60, 30)
 }
+
 //make ball bounce
 function ballBounce(){
     if (ball.y + ball.gravity <= 0 || ball.y + ball.gravity >= canvas.height){
@@ -97,6 +100,7 @@ function ballBounce(){
     ballWallCollision();
 }
 
+//check if ball is hitting paddle or wall
 function ballWallCollision(){
     if ((ball.y + ball.gravity <= player2.y + player2.height && 
         ball.x + ball.width + ball.speed >= player2.x && 
@@ -132,9 +136,6 @@ drawElement(player1);
 drawElement(player2);
 drawElement(ball);
 
-//detect collision
-
-// draw elements
 function drawElements(){
     context.clearRect(0, 0, canvas.width, canvas.height);
     drawElement(player1);
@@ -144,6 +145,7 @@ function drawElements(){
     diplayScore2();
 }
 
+//loop the game
 function loop(){
     ballBounce();
     window.requestAnimationFrame(loop);
