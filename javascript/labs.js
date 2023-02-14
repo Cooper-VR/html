@@ -1,3 +1,5 @@
+// jshint esversion: 6
+
 // JSF1 Coding Challenge #1
 
 let markWeight = 78;
@@ -18,7 +20,7 @@ else{
     markHigherBMI = false;
 }
 
-console.log("Set 1:")
+console.log("Set 1:");
 
 console.log(markBMI);
 console.log(johnBMI);
@@ -87,7 +89,7 @@ else{
     console.log(higher);
 }
 
-// Coding Challenge #3
+// Coding Challenge #1
 
 let dolphinScore;
 let KoalasScore;
@@ -127,7 +129,7 @@ else if (dolphineWin == false && KoalasAvg <= 100){
     console.log("Koalas won but didnt score 100");
 }
 
-// JSF2 Coding Challenge #
+// JSF2 Coding Challenge #4
 const findAvg = (score) =>{
     let total = 0;
     for (var i = 0; i < score.length; i++){
@@ -169,4 +171,55 @@ switch(winner){
     case(3):
         console.log(`nobody won`);
         break;
+}
+
+// JSF2 Coding Challenge #2
+let bills = [125, 555, 44];
+let totals = [];
+
+function calcTip(bill){
+    for (let i = 0; i < bill.length; i++){
+        if (bill[i] >= 50 && bill[i] <= 300){
+            totals.push(bill[i] * 0.15);
+        } else {
+            totals.push(bill[i] * 0.2);
+        }
+    }
+}
+calcTip(bills);
+console.log(totals);
+
+// JSF2 Coding Challenge #
+
+let MarkObj = {
+    name: "Mark Miller",
+    mass: 78,
+    height: 1.69,
+    calcBMI: function(mass, height){
+        mass = this.mass;
+        height = this.height;
+
+        return mass / Math.pow(height, 2);
+    }
+};
+
+let JohnObj = {
+    name: "John Smith",
+    mass: 92,
+    height: 1.95,
+    calcBMI: function(mass, height){
+        mass = this.mass;
+        height = this.height;
+
+        return mass / Math.pow(height, 2);
+    }
+};
+
+markBMI = MarkObj.calcBMI();
+johnBMI = JohnObj.calcBMI();
+
+if (markBMI > johnBMI){
+    console.log(`Mark's BMI (${markBMI}) is higher than John's (${johnBMI})!`);
+} else {
+    console.log(`John's BMI (${johnBMI}) is higher than Mark's (${markBMI})!`);
 }

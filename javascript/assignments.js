@@ -2,6 +2,8 @@
 Cooper Bower P.M.
 */
 
+// jshint esversion: 6
+
 // JSF1 Assignment Data Types
 
 let country = "Japan";
@@ -9,7 +11,7 @@ let continent = "Asia";
 let population = 125;
 let country2 = country;
 
-alert(country2);
+//alert(country2);
 
 let isIsland = true;
 //var language;
@@ -74,10 +76,10 @@ console.log(undefined + 1); // undef
 console.log(" \t \n" - 2); //   -2 (just -2)
 
 
-a = parseInt(prompt("First number?"));
-b = parseInt(prompt("Second number?"));
+//a = parseInt(prompt("First number?"));
+//b = parseInt(prompt("Second number?"));
 let sum = a + b;
-alert(sum); // 3
+//alert(sum); // 3
 
 // JSF1 Assignment String and Template Literals
 description = `${country} is in ${continent} and 120 mill people speak ${language}`;
@@ -110,17 +112,17 @@ console.log(5 + 6 + '4' + 9 - 4 - 2); //1143
 
 //JSF1 Assignment  Equality Operators.
 
-let numNeighbours = prompt('How many neighbor countries does your country have?');
+//let numNeighbours = prompt('How many neighbor countries does your country have?');
 
-if (parseInt(numNeighbours) === 1){ //if using "===" needs to be same data type
-    console.log("only 1 border");
-}
-else if (numNeighbours > 1){
-    console.log("more than one border");
-}
-else{
-    console.log("no borders");
-}
+//if (parseInt(numNeighbours) === 1){ //if using "===" needs to be same data type
+    //console.log("only 1 border");
+//}
+//else if (numNeighbours > 1){
+    //console.log("more than one border");
+//}
+//else{
+    //console.log("no borders");
+//}
 
 // JSF1 Assignment Logical Operator
 
@@ -160,13 +162,13 @@ function describeCountry (country, population, capitalCity){
     return finalString;
 }
 
-const description1 = describeCountry(prompt("whats the country"), prompt("what is the population"), prompt("what is the capital"));
-const description2 = describeCountry(prompt("whats the country"), prompt("what is the population"), prompt("what is the capital"));
-const description3 = describeCountry(prompt("whats the country"), prompt("what is the population"), prompt("what is the capital"));
+//const description1 = describeCountry(prompt("whats the country"), prompt("what is the population"), prompt("what is the capital"));
+//const description2 = describeCountry(prompt("whats the country"), prompt("what is the population"), prompt("what is the capital"));
+//const description3 = describeCountry(prompt("whats the country"), prompt("what is the population"), prompt("what is the capital"));
 
-console.log(description1);
-console.log(description2);
-console.log(description3);
+//console.log(description1);
+//console.log(description2);
+//console.log(description3);
 
 // JSF2 Assignment Function Declarations vs. Expressions
 function populationPercent (population){
@@ -175,34 +177,34 @@ function populationPercent (population){
     return percent;
 }
 
-const pop1 = populationPercent(prompt("whats the popluation"));
-const pop2 = populationPercent(prompt("whats the popluation"));
-const pop3 = populationPercent(prompt("whats the popluation"));
+//const pop1 = populationPercent(prompt("whats the popluation"));
+//const pop2 = populationPercent(prompt("whats the popluation"));
+//const pop3 = populationPercent(prompt("whats the popluation"));
 
-console.log(pop1);
-console.log(pop2);
-console.log(pop3);
+//console.log(pop1);
+//console.log(pop2);
+//console.log(pop3);
 
 // JSF2 Assignment Function Declarations vs. Expressions
 
 const populationPercent2 = (population) => (population / 7900) * 100;
-const population1 = prompt("whats the population");
-const population2 = prompt("whats the population");
-const population3 = prompt("whats the population");
+//const population1 = prompt("whats the population");
+//const population2 = prompt("whats the population");
+//const population3 = prompt("whats the population");
 
-console.log(populationPercent2(population1));
-console.log(populationPercent2(population2));
-console.log(populationPercent2(population3));
+//console.log(populationPercent2(population1));
+//console.log(populationPercent2(population2));
+//console.log(populationPercent2(population3));
 
 const sum2 = (num1, num2) => num1 + num2;
 const stringLength2 = (str) => console.log(`the length of "${str}" is:`, str.length);
 const stringLength3 = (str) => {
-    let length = str.length
-    console.log(`the length of "${str}" is:`, length)
-    return str.length
+    let length = str.length;
+    console.log(`the length of "${str}" is:`, length);
+    return str.length;
 };
 const showAlert = (name) => {    
-    alert(alerts[(Math.floor(Math.random()*alerts.length))] + `, ${name}!`)
+    //alert(alerts[(Math.floor(Math.random()*alerts.length))] + `, ${name}!`);
 };
 
 // JSF2 Assignment Functions Calling Other Functions
@@ -211,10 +213,78 @@ const describePopulation = (country, population) => {
     return formatedString;
 };
 
-console.log(describePopulation(prompt("another set country") ,prompt("another set for population")));
-console.log(describePopulation(prompt("another set country") ,prompt("another set for population")));
-console.log(describePopulation(prompt("another set country") ,prompt("another set for population")));
+//console.log(describePopulation(prompt("another set country") ,prompt("another set for population")));
+//console.log(describePopulation(prompt("another set country") ,prompt("another set for population")));
+//console.log(describePopulation(prompt("another set country") ,prompt("another set for population")));
 
 // JSF2 Assignment Introduction to Arrays
 
-populations = []
+populations = [59, 330, 68, 1411];
+
+console.log(populations.length == 4);
+
+let percentages = [];
+
+for (let i = 0; i < 4; i++){
+    let percent = populationPercent2(populations[i]);
+    percentages.push(percent);
+    console.log(percentages[i]);
+}
+
+// JSF2 Basic Array Operations (Methods)
+
+let neighbours = ["canada", "Mexico", "cuba"];
+neighbours.push("utopia");
+console.log(neighbours[3]);
+neighbours.pop();
+console.log(neighbours);
+
+if (neighbours.includes("Germany")){
+    console.log("");
+} else {
+    console.log("Probably not a central European country :D");
+}
+
+neighbours[0] = "nice people country";
+console.log(neighbours);
+
+// JSF2 Introduction to Objects
+
+let myCountry = {
+    country: ["Finland"],
+    capital: ["Helsinki"],
+    language: ["finnish"],
+    population: [6],
+    neighbours: [3],
+    wholeCountry: "",
+    isIsland: false,
+    describe: function(wholeString){
+        console.log(this.wholeCountry);
+    }
+};
+
+// JSF2 Dot vs Bracket Notation
+
+myCountry.population[0] = myCountry.population[0] + 2;
+myCountry["population"][0] = myCountry["population"][0] - 2;
+
+
+let wholeCountry = "";
+wholeCountry = `${myCountry.country[0]} has ${myCountry.population[0]} million ${myCountry.language[0]}-speaking people, ${myCountry.neighbours[0]} neighboring countries and a capital called ${myCountry.capital[0]}.`
+
+myCountry.wholeCountry = wholeCountry;
+
+
+// JSF2 Object Methods
+
+myCountry.describe(wholeCountry);
+
+if (myCountry.neighbours < 1){
+    myCountry.isIsland = true;
+} else{
+    myCountry.isIsland = false;
+}
+
+// JSF2 The for Loop
+
+
