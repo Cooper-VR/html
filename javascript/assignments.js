@@ -287,4 +287,36 @@ if (myCountry.neighbours < 1){
 
 // JSF2 The for Loop
 
+for (let i = 1; i <= 50; i++){
+    console.log(`Voter number ${i} is currently voting`);
+}
 
+//JSF2 Looping Arrays, Break and Continue
+
+let percentages2 = [];
+
+for (let i = 0; i < 4; i++){
+    let percent = populationPercent2(populations[i]);
+    percentages2.push(percent);
+    console.log(percentages2[i]);
+}
+
+//JSF2 Looping Backwards and Loops in Loops
+
+let listOfNeighbours = [['Canada', 'Mexico'], ['Spain'], ['Norway', 'Sweden', 'Russia']];
+
+for (let i = 0; i < listOfNeighbours.length; i++){
+    
+    for (let x = 0; x < listOfNeighbours[i].length; x++){
+        if (listOfNeighbours[i].length < 2){
+            console.log("no neighbours");
+        } else{
+           current = listOfNeighbours[i][x];
+           for (let y = 0; y < listOfNeighbours[i].length; y ++){
+            if (current != listOfNeighbours[i][y])
+            console.log(`${current} is neighbours with ${listOfNeighbours[i][y]}`);
+           }
+        }
+    }
+
+}
