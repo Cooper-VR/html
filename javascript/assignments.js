@@ -1,8 +1,14 @@
+// jshint esversion: 6
+(function() {
+    'use strict';
+    
+    // Your code here...
+
+
+
 /*
 Cooper Bower P.M.
 */
-
-// jshint esversion: 6
 
 // JSF1 Assignment Data Types
 
@@ -14,7 +20,7 @@ let country2 = country;
 //alert(country2);
 
 let isIsland = true;
-//var language;
+let language;
 
 console.log(country);
 //console.log(language);
@@ -40,7 +46,7 @@ console.log(half);
 console.log(population + 1);
 
 if (population > 36){
-    console.log("population is greater than the average 36 mill")
+    console.log("population is greater than the average 36 mill");
 }
 else if (population > 36){
     console.log("population is less than the average");
@@ -219,7 +225,7 @@ const describePopulation = (country, population) => {
 
 // JSF2 Assignment Introduction to Arrays
 
-populations = [59, 330, 68, 1411];
+let populations = [59, 330, 68, 1411];
 
 console.log(populations.length == 4);
 
@@ -311,7 +317,7 @@ for (let i = 0; i < listOfNeighbours.length; i++){
         if (listOfNeighbours[i].length < 2){
             console.log("no neighbours");
         } else{
-           current = listOfNeighbours[i][x];
+           let current = listOfNeighbours[i][x];
            for (let y = 0; y < listOfNeighbours[i].length; y ++){
             if (current != listOfNeighbours[i][y])
             console.log(`${current} is neighbours with ${listOfNeighbours[i][y]}`);
@@ -320,3 +326,5 @@ for (let i = 0; i < listOfNeighbours.length; i++){
     }
 
 }
+
+})();
