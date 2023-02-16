@@ -1,0 +1,40 @@
+arrays:
+	same as python
+	to add use the .push method
+	use .pop to get rid of last element
+	negitive indexes are strange (makes nested arrays hard)
+	
+for loops:
+	same as c#
+	syntax: for(call variable; set condition; set increment;), for (let i = 0; i < 5; i++){}
+	can use break and continue
+	varables are not local
+	
+objects(four types):
+	type1:
+		like a python dictionary, but can have method inbeded like a class
+	type2:
+		use let obj = new Object(); then add to the obeject using obj.newProperty = "value"
+	type3:
+		can create a new one from existing object using Object.create(existingObject)
+	type4:
+		use classes(very weird not sure the benifit)
+		example:
+			class MyClass {
+  				constructor(property1, property2, property3) {
+    					this.property1 = property1;
+    					this.property2 = property2;
+    					this.property3 = property3;
+  				}
+			}
+
+			var myObject = new MyClass("value1", "value2", "value3");
+
+other
+	to use strict:
+		use: 
+		(function() {
+    			'use strict';
+			//code here
+		)();
+	to use new javascript add coment "// jshint esversion: 6" to the top
