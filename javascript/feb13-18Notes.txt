@@ -28,7 +28,68 @@ objects(four types):
   				}
 			}
 
-			var myObject = new MyClass("value1", "value2", "value3");
+		var myObject = new MyClass("value1", "value2", "value3");
+
+DOM:
+	what it does:
+		changes or removes HTML elemets
+		change or add css styles
+		read and change elements atributes
+		create new html elements
+		add event listeners(keypress, click, submit)
+	getElementByID():
+		gives DOM element for this, the argument is just a string, no extra character need to be added specify that its an ID
+	get elements by class or tag name
+		getElementsByClassName()
+			takes in the class name and returns something similar to an array
+		getElementsByTagNAme()
+			takes in the tag name and returns an array like getting by class name
+		for both can use array.forEach after you turn it into an array
+			use Array.from(object returned form methods)
+			syntax for foreach: array.forEach(function(item){code to run}
+	querySelector:
+		document.querySelector()
+		needs symbol for class or id specification
+		can use pshudo classes
+		can only select one element, use .querySelectorAll() to get all the elements
+	changing text and content
+		get text with .textContent
+		InnerHTML will get all the html including children, can append by setting it equal to html(.innerHTML = <p>something</>)
+	DOM nodes
+		there are node types, can get with .nodeType
+		return number, can get key on w3schools
+		can also use nodeName to get tag or name of the node
+		can also check if it had any children with .hasChildNodes
+		can also clone with .cloneNote(), use true for argument to get all content and not just single element
+	traversing the DOM
+		to get parent of an element use .parentNode, also has .parentElement
+		to get childNodes use .childNodes, this returns children and textNodes
+		use .children to get only the elements
+		siblings:
+			to get next sibling down the DOM, use .nextSibling, use .nextElementSibling to only get elements
+			to get previous one, use .previousSibling, or PreviousElementSibling
+			can use .querySelector on elements to only search that set
+	events
+		you need to add an even listener to the element to check
+		to add an even listener use, .addEventListener("event type", <function to run> function(e){})
+			e is the event object properties when fired,
+			for example use the "e" parameter to check if the shift key was pressed when even was called
+			e.target will be the element
+		to delete use parent.removeChild(element To remove)
+		to prevent browser default use e.preventDefault();
+	event bubbling
+		one event listener to run all the other inside
+		instead of have 5 event listerns to 5 button, just one for all of them
+		use e.target.className() to what the target was
+		e.target will be the object theat was clicked or where the event happened
+		use this so that you can add elements and not add an listener
+	interacting with forms
+		can use document.forms to get all the forms, returns an html collection of forms
+		in document.forms, use [] to specify id
+		might need to prevent behavior
+	creating elements
+		
+			
 
 other
 	to use strict:
