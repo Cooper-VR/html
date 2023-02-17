@@ -31,13 +31,13 @@ objects(four types):
 		var myObject = new MyClass("value1", "value2", "value3");
 
 DOM:
-	what it does:
+	what it does
 		changes or removes HTML elemets
 		change or add css styles
 		read and change elements atributes
 		create new html elements
 		add event listeners(keypress, click, submit)
-	getElementByID():
+	getElementByID()
 		gives DOM element for this, the argument is just a string, no extra character need to be added specify that its an ID
 	get elements by class or tag name
 		getElementsByClassName()
@@ -47,7 +47,7 @@ DOM:
 		for both can use array.forEach after you turn it into an array
 			use Array.from(object returned form methods)
 			syntax for foreach: array.forEach(function(item){code to run}
-	querySelector:
+	querySelector
 		document.querySelector()
 		needs symbol for class or id specification
 		can use pshudo classes
@@ -111,7 +111,20 @@ DOM:
 		needed if the scipt is in head or before DOM is loaded
 		it just checks if the DOM is loaded, once it is it runs
 		wrap all the code in this so that the code runs only once the DOM is loaded
-
+BOM:
+	what is it
+		its a set of function and tools that allow the developer to interact with the the borowser, like window size, location, history, and the navigator objects
+	difference beween BOM and DOM
+		the DOM let devs interact with the elemements and the html
+		the BOM allows the dev to interact with the browser itself, and minipulate the webpage
+	displaying with the BOM
+		this allows the dev to interact with the user with prompt, alert, confirm, etc
+	determine screen size with BOM
+		you can use the screen object to get the users screen size oin pixles
+	window vs document
+		the window is the browser window 
+		the document is the html,
+		these are for different things, document is DOM, window is BOM
 	
 
 other
