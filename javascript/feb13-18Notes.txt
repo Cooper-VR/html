@@ -135,3 +135,7 @@ other
 			//code here
 		)();
 	to use new javascript add coment "// jshint esversion: 6" to the top
+
+	debugging
+		use the debugger keyword to pause the script
+		this let the dev check everything

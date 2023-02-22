@@ -1,5 +1,8 @@
-// jshint esversion: 6
+// jshint esversion: 7
 
+
+document.addEventListener("DOMContentLoaded", function() {
+    /*
 // JSF1 Coding Challenge #1
 
 let markWeight = 78;
@@ -222,4 +225,360 @@ if (markBMI > johnBMI){
     console.log(`Mark's BMI (${markBMI}) is higher than John's (${johnBMI})!`);
 } else {
     console.log(`John's BMI (${johnBMI}) is higher than Mark's (${markBMI})!`);
+}
+
+*/
+
+//Data Structures, Modern Operators and Strings Coding Challenge #1
+
+const game = {
+    team1: 'Bayern Munich',
+    team2: "Borrussia Dortmund",
+    players: [
+        [
+            'Neuer',
+            'Pavard',
+            'Martinex',
+            'Alaba',
+            'Davies',
+            'Kimmich',
+            'Goretzka',
+            'Coman',
+            'Muller',
+            'Gnarby',
+            'Lewandowski',
+        ],
+        [
+            'Burki',
+            'Schulz',
+            'Hummels',
+            'Akanji',
+            'Hakimi',
+            'Weigl',
+            'Witsel',
+            'Hazard',
+            'Brandt',
+            'Sancho',
+            'Gotze'
+        ],
+    ],
+    score: '4:0',
+    scored:['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
+    date: 'Nov 9th 2037',
+    odds: {
+        team1: 1.33,
+        x: 3.25,
+        team2: 6.5,
+    },
+    players1Final: ['Neuer',
+    'Pavard',
+    'Martinex',
+    'Alaba',
+    'Davies',
+    'Kimmish',
+    'Goretzka',
+    'Coman',
+    'Muller',
+    'Gnarby',
+    'Lewandowski',
+    'Thiago', 
+    'Coutinho',
+    'Perisic'
+    ]
+};
+
+let team1 = game.odds.team1;
+let draw = game.odds.draw;
+let team2 = game.odds.team2;
+
+function printGoals(...players){
+    for (let i = 0; i < players.length; i++){
+        console.log(players[i]);
+    }
+    let team1Score = 0;
+    let team2Score = 0;
+
+    for (let i = 0; i < players.length; i++) {
+        if (game.players[0].includes(players[i])){
+            team1Score++;
+        } else if (game.players[1].includes(players[i])){
+            team2Score++;
+        } 
+    }
+
+    console.log(`${game.team1} scored ${team1Score}`);
+    console.log(`${game.team2} scored ${team2Score}`);
+    
+    team1Better = game.odds.team1 < game.odds.team2;
+
+    switch(team1Better){
+        case(true):
+            console.log("team 1 is more likley to win");
+            break;
+        case(false):
+            console.log("team 2 is more likley to win");
+    }
+}
+
+printGoals('Davies', 'Muller', 'Lewandowski', 'Kimmich');
+printGoals(game.scored[0], game.scored[1], game.scored[2], game.scored[3]);
+
+//Data Structures, Modern Operators and Strings Coding Challenge #2
+
+for (let i = 0; i < game.scored.length; i++) {
+    console.log(`Goal ${i + 1}: ${game.scored[i]}`);
+
+    
+}
+console.log(`Odd of victory ${game.team1}: ${game.odds.team1}`);
+console.log(`Odd of draw : ${game.odds.x}`);
+console.log(`Odd of victory ${game.team2}: ${game.odds.team2}`);
+
+let scorers = {
+};
+
+for (let i = 0; i < game.scored.length; i++) {
+    let scored = game.scored[i];
+    if (scorers[scored] == null){
+        scorers[scored] = 1;
+    } else {
+        scorers[scored] += 1;
+    }
+}
+
+console.log(scorers);
+
+
+//Data Structures, Modern Operators and Strings Coding Challenge #3
+
+const gameEvents = new Map([ 
+    [17, ' GOAL'],
+    [36, ' Substitution'],
+    [47, ' GOAL'],
+    [61, 'Substitution'],
+    [64, ' Yellow card'],
+    [69, ' Red card'], 
+    [70, 'Substitution'],
+    [72, ' Substitution'],
+    [76, ' GOAL'],
+    [80, ' GOAL'],
+    [92, ' YELLOW CARD'] 
+]);
+
+console.log(gameEvents);
+
+gameEvents.delete(64);
+
+console.log(gameEvents);
+const times = Array.from(gameEvents.keys());
+console.log(times.length);
+
+let timeBetween = [];
+let total = 0;
+
+for (let i = 0; i <= times.length; i++){
+    timeBetween.push(times[i+1] - times[i]);
+
+    if (isNaN(timeBetween[i]) == false){
+        total += timeBetween[i];
+    }
+    
+}
+console.log(`An event happened, on average, every ${total / times.length - 1} minutes`);
+
+
+for (let i = 0; i < Array.from(gameEvents.keys()).length; i++) {
+    console.log(Array.from(gameEvents.values)[i]);
+    if (Array.from(gameEvents.keys())[i] < 45){
+        console.log(`[FIRST HALF] ${Array.from(gameEvents.keys())[i]}: ${Array.from(gameEvents.values())[i]}`);
+    } else{
+        console.log(`[SECOND HALF] ${Array.from(gameEvents.keys())[i]}: ${Array.from(gameEvents.values())[i]}`);
+    }
+}
+
+//Data Structures, Modern Operators and Strings Coding Challenge #4
+
+
+
+let textElement = document.createElement('textarea');
+textElement.setAttribute('id', 'textElement');
+
+let newButton = document.createElement('button');
+newButton.setAttribute('id', 'newButton');
+newButton.setAttribute('onclick', 'newButtonClick()');
+newButton.textContent = "submit";
+
+document.body.append(textElement);
+document.body.append(newButton);
+//check below for function
+
+/*
+//Arrays Coding Challenge #1
+function checkDogs(dogsJulia, dogsKate){
+    let newJulia = dogsJulia;
+    newJulia.pop();
+    newJulia.pop();
+
+    newJulia.shift();
+
+    let both = newJulia.concat(dogsKate);
+    console.log(both);
+    for (let i = 0; i < both.length; i++){
+        if (both[i] <= 2){
+            console.log(`Dog number ${i} is still a puppy, and is ${both[i]} years old`);
+        } else {
+            console.log(`Dog number ${i} is an adult, and is ${both[i]} years old`);
+        }
+    };
+}
+
+dogs = [3, 5, 2, 12, 7];
+dogs2 = [4, 1, 15, 8, 3];
+checkDogs(dogs, dogs2);
+
+*/
+//Arrays Coding Challenge #2
+
+let calcAverageHumanAge  = (ages) => {
+    let total = ages.filter(age => age <= 2)
+                    .map(age => age * 2)
+                    .concat(ages.filter(age => age > 2)
+                                .map(age => 16 + age * 4))
+                    .filter(age => age < 18)
+                    .reduce((acc, age) => acc + age, 0);
+
+    console.log(total);
+};
+data = [5, 2, 4, 1, 15, 8, 3];
+calcAverageHumanAge(data);
+
+//Arrays Coding Challenge #4
+
+const dogs = [{
+    weight: 22,
+    curFood: 250,
+    owners: ['Alice', 'Bob']
+    },{
+    weight: 8,
+    curFood: 200,
+    owners: ['Matilda']
+    },{
+    weight: 13,
+    curFood: 275,
+    owners: ['Sarah', 'John']
+    },{
+    weight: 32,
+    curFood: 340,
+    owners: ['Michael']
+    }
+];
+let okay = []
+let eatingAmounts = [];
+let recommendedFood = 0;
+for (let i = 0; i < dogs.length; i++) {
+    recommendedFood = dogs[i].weight ** 0.75 * 28;
+    dogs[i].recommended = recommendedFood;
+
+    if (dogs[i].recommended/dogs[i].curFood > 10){
+        eatingAmounts.push('ownersEatTooMuch');
+        console.log('okay: false');
+    } else if (dogs[i].recommended/dogs[i].curFood < -10){
+        eatingAmounts.push('ownersEatTooLittle');
+        console.log('okay: false');
+    } else{
+        if (dogs[i].curFood == recommendedFood){
+            console.log("exacally right: true")
+        } else {
+            console.log("exacally right: false")
+        }
+        eatingAmounts.push('good');
+        console.log('okay: true');
+        okay.push(dogs[i]);
+    }
+
+    if (dogs[i].owners.includes("Sarah") && eatingAmounts[i] && eatingAmounts[i] != 'good'){
+        console.log("sarah need to feed her dog better");
+    }
+}
+
+let toMuch = [];
+let toLittle = [];
+let good = [];
+
+for (let index = 0; index < eatingAmounts.length; index++) {
+    if (eatingAmounts[index] == 'ownersEatTooMuch'){
+        toMuch.push(index);
+    } else if (eatingAmounts[index] == 'ownersEatTooLittle'){
+        toLittle.push(index);
+    } else{
+        good.push(index);
+    }
+}
+
+shadowDogs = dogs;
+console.log(shadowDogs);
+shadowDogs.sort((a, b) => {
+    if (a.recommended < b.recommended){
+        return -1;
+    } else if (a.recommended > b.recommended){
+        return 1;
+    } else{
+        return 0;
+    }
+});
+
+
+
+let muchNames = [];
+let littleNames = [];
+let goodNames = [];
+
+for (let i = 0; i < toMuch.length; i++) {
+    muchNames.push(dogs[toMuch[i]].owners);
+}
+for (let i = 0; i < toLittle.length; i++) {
+    littleNames.push(dogs[toLittle[i]].owners);
+}
+for (let i = 0; i < good.length; i++) {
+    goodNames.push(dogs[good[i]].owners);
+}
+
+console.log(`${muchNames} eat to much`);
+console.log(`${littleNames} eat to much`);
+console.log(`${goodNames} eat to much`);
+
+});
+
+
+function newButtonClick(){
+    let resultString = document.createElement('p');
+    resultString.setAttribute('id', 'showResult');
+
+    const check = document.querySelector('#showResult');
+
+    if (check != null){
+        check.remove();
+    }
+
+    let text = document.querySelector('#textElement').value;
+    let textArray = text.split(', ');
+    let endString = '';
+    newStringArray = [];
+    for (let i = 0; i < textArray.length; i++){
+        let string = textArray[i];
+        const stringArray = string.split("_");
+
+        endString = '';
+        for (let index = 1; index < stringArray.length; index++) {
+            console.log(stringArray[index]);
+            endString += stringArray[index].charAt(0).toUpperCase() + stringArray[index].slice(1);
+        }
+
+        const newString = stringArray[0] + endString;
+        endString = '';
+        console.log(`new string ${newString}`);
+        newStringArray.push(newString);
+    }
+    resultString.textContent = newStringArray;
+    document.body.append(resultString);
 }
