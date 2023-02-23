@@ -17,8 +17,6 @@ for (let i = 0; i < 10; i++){
     section.setAttribute('class', 'section');
 
     header.append(section);
-
-    
 }
 
 
@@ -26,7 +24,7 @@ for (let i = 0; i < 10; i++){
 let sections =  header.querySelectorAll('.section');
 Array.from(sections).forEach(function(e){
     sectionParagraph = document.createElement('p');
-    sectionParagraph.textContent = 'asdfasdf';
+    sectionParagraph.textContent = 'this is created in a loop';
     e.append(sectionParagraph);
 
 });
