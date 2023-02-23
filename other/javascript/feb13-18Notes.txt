@@ -139,3 +139,17 @@ other
 	debugging
 		use the debugger keyword to pause the script
 		this let the dev check everything
+
+	events
+		onload: This event is fired when a web page has finished loading all of its resources, including images, stylesheets, and scripts.
+		onfocus: This event is fired when an element (such as a text input or button) receives focus, meaning the user has clicked on it or tabbed to it.
+		onblur: This event is fired when an element loses focus, meaning the user has clicked or tabbed away from it.
+		onchange: This event is fired when the value of an input element (such as a text input, checkbox, or select box) has changed.
+		onkeydown: This event is fired when a key on the keyboard is pressed down.
+		onkeyup: This event is fired when a key on the keyboard is released.
+		onkeypress: This event is fired when a key on the keyboard is pressed and released in quick succession.
+		onclick: This event is fired when an element (such as a button or link) is clicked.
+		onmouseover: This event is fired when the user's mouse cursor enters an element.
+		onmouseout: This event is fired when the user's mouse cursor leaves an element.
+
+		Each of these events can be attached to an HTML element using an "on" attribute, such as onclick="myFunction()", or they can be attached to an element using JavaScript code, such as myElement.addEventListener('click', myFunction). When the event is fired, the associated function (such as myFunction()) is executed.
