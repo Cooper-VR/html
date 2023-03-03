@@ -1,6 +1,3 @@
-.webgl-content * {border: 0; margin: 0; padding: 0}
-.webgl-content {position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%);}
-
 .webgl-content .logo, .progress {position: absolute; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%);}
 .webgl-content .logo {background: url('progressLogo.Light.png') no-repeat center / contain; width: 154px; height: 130px;}
 .webgl-content .progress {height: 18px; width: 141px; margin-top: 90px;}
@@ -16,3 +13,221 @@
 .webgl-content .footer .webgl-logo {background-image: url('webgl-logo.png'); width: 204px; float: left;}
 .webgl-content .footer .title {margin-right: 10px; float: right;}
 .webgl-content .footer .fullscreen {background-image: url('fullscreen.png'); width: 38px; float: right;}
+
+#unityContainer{
+    width: 75%;
+    height: 75%;
+    
+}
+.webgl-content{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 1fr;
+    margin-bottom: 1fr;;
+
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    background-image: url(images/HD-wallpaper-dark-vertical-black-thumbnail.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 5%;
+}
+p{
+    font-family: saoFont-regular;
+}
+#vid{
+    align-self: center;
+}
+h1{
+    font-size: 50px;
+    text-align: center;
+    font-family: sao-regular;
+}
+@font-face {
+    font-family: saoFont-bold;
+    src: url(../html/sao-ui/SAOUI-Bold.otf);
+}
+@font-face {
+    font-family: sao-regular;
+    src:url(../html/sao-ui/SAOUI-Regular.otf)
+}
+.pageLinkCol{
+    font-family: saoFont-bold;
+    text-align: center;
+    border-radius: 12px;
+    border-style: solid;
+    height: 30px;
+    background-color: green;
+    margin-top: 5px;
+    font-size: 20px;
+    color: white;
+    padding:15px;
+
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.15s;
+}
+.pageLinkCol:hover{
+    opacity: 0.7;
+}
+
+input{
+    border-radius: 10px;
+    border-style: solid;
+}
+.nightMode{
+    position: fixed;
+    align-self:center;
+    font-size: 30px;
+    border-color: white;
+    border-radius: 8px;
+    border-style: solid;
+    background-color: white;
+    cursor: pointer;
+
+    top: 0px;
+    right: 0px;
+    transition: box-shadow 0.15s;
+}
+.nightMode:hover{
+    
+    box-shadow: 0 0 8px 8px rgba(0, 0, 0, 0.082);
+}
+.main{
+    display: flex;
+    padding: 0;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    padding-right: 40px;
+    overflow-y: scroll;
+    height: 100%;
+    position: fixed;
+    top: 7%;
+    
+    width: 100%;
+    
+}
+.mathSubmit{
+    color:rgb(41, 41, 41);
+    background: linear-gradient(to bottom, rgb(255, 208, 0), rgb(255, 245, 153));
+    border-radius: 0.5px;
+    border-color: rgb(197, 128, 0);
+    border-style: solid;
+    border-width: 1px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    text-align: center;
+
+    transition: box-shadow 0.15s, opacity 0.15s;
+}
+.mathSubmit:hover{
+    box-shadow: 0 0 5px rgb(195, 221, 80);
+    cursor: pointer;
+}
+.mathSubmit:active{
+    opacity: 0.6;
+}
+.linksTable div{
+    width: 10vw;
+    display: flex;
+    flex-direction: column;
+}
+.linksTable{
+    
+}
+.gibberish{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.gibberish p{
+    color: white;
+    font-size: 20px;
+}
+
+.randomParagraph{
+    width: fit-content;
+    margin-left: 15vw;
+}
+tr, td{
+
+    width: 25%;
+    height: 25%;
+    padding:0;
+}
+
+.randomParagraph3{
+    width: 60vw;
+    margin-left: 20vw;
+    display: flex;
+}
+.randomParagraph2{
+    width: 15%;
+}
+.gibberish2{
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.gibberish2 p{
+    color: white;
+    font-size: 20px;
+}
+
+.calc{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.number, .operator{
+    width: 100%;
+    padding-top: 15%;
+    padding-bottom: 15%;
+    height: 100%;
+    background-color: white;
+}
+
+.equationBox{
+    text-align: center;
+    border-radius: 3px;
+    color:black;
+    background-color: white;
+    border-radius: 5px;
+}
+.content{
+    background-color: white;
+    display: inline-block;
+}
+.parent{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    top: 150px;
+}
+.positionChange{
+    position: fixed;
+}
+.header{ 
+    position: fixed;
+    margin: 0px;
+    background-color: rgb(43, 43, 43);  
+    width: 100%; 
+    color: white; 
+    position: fixed;
+    top: 0px;
+}
+.desciptionHeader{
+    font-family: saoFont-bold;
+    font-size: 35px;
+    color:white;
+    text-align: center;
+    font-weight: bold;
+}
+body{
+    margin:0;
+}

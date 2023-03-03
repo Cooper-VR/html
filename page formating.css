@@ -67,6 +67,7 @@ input{
 }
 .main{
     display: flex;
+    justify-content: space-between;
     
 }
 .mathSubmit{
@@ -93,14 +94,17 @@ input{
     width: 10vw;
     display: flex;
     flex-direction: column;
+    
 }
 .linksTable{
+    display: flex;
     margin-bottom: 40px;
     padding-right: 40px;
     overflow-y: scroll;
     height: 100%;
     position: fixed;
     top: 7%;
+    justify-content: center;
 }
 .gibberish{
     display: flex;
